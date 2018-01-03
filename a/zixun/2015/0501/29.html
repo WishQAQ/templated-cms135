@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML 5 将带来什么？-我的网站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+<header class="header">
+<nav class="menu">
+<h1 id="logo"><a href="/" title="我的网站"><img src="/skin/default/images/lg.png" width="173" height="76" alt="我的网站"></a></h1>
+<ul>
+<li><a href="/">首页</a></li>
+
+<li><a href="/a/service/">服务</a></li>
+
+<li><a href="/a/case/">案例</a></li>
+<li class='active'><a href='/a/news/'>新闻</a></li>
+<li><a href="/a/about/">关于</a></li>
+
+<li><a href="/a/contact/">联系</a></li>
+
+</ul>
+</nav>
+</header>
+<!--banner-->
+<section class="banner2" style="background-image:url(/skin/default/images/news_b.jpg)">
+<dl>
+<h2>资讯</h2><i>都发生过什么?  What had happened? </i>
+<div class="side_nav">
+<ul>
+<li><a href='/a/zixun/' id='active'>资讯</a></li>
+<li><a href="/a/zhishiku/">知识库</a></li>
+
+<li><a href="/a/beian/">备案</a></li>
+
+<li><a href="/a/bangzhu/">帮助</a></li>
+
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+
+<section id="main">
+<div class="news_show">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200"><img src="/uploads/allimg/150501/222553F11-0-lp.jpg" width="200" ></td>
+    <td width="20">&nbsp;</td>
+    <td valign="top" class="news_text">
+<h3>HTML 5 将带来什么？</h3>
+<span>日期：2015-05-01 22:25</span>
+<span>浏览次数：<script src="/plus/count.php?view=yes&aid=29&mid=1" type='text/javascript' language="javascript"></script></span>
+<span>分类：资讯</span>
+<span>来源：未知</span>
+    </td>
+  </tr>
+<tr>
+<td height="30"></td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td width="200">
+				&nbsp;</td>
+			<td width="20">
+				&nbsp;</td>
+			<td class="news_text" valign="top">
+				<h3>
+					HTML 5 将带来什么？</h3>
+				日期：2015-02-07 15:58:28浏览次数： 85分类：资讯来源：</td>
+		</tr>
+		<tr>
+			<td height="30">
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p style="text-align: center;">
+	<img alt="图片1.jpg" src="/uploads/allimg/150501/222553F11-0.jpg" title="1423297512776723.jpg" /></p>
+<p>
+	<span style="font-size: 14px;"><strong>以下是 HTML 5 草案中最激动人心的部分：</strong><br />
+	<br />
+	全新的，更合理的 Tag，多媒体对象将不再全部绑定在 object 或 embed Tag 中，而是视频有视频的 Tag，音频有音频的 Tag。<br />
+	<br />
+	本地数据库，这个功能将内嵌一个本地的 SQL 数据库，以加速交互式搜索，缓存以及索引功能。同时，那些离线 Web 程序也将因此获益匪浅。<br />
+	<br />
+	不需要插件的富动画。Canvas 对象将给浏览器带来直接在上面绘制矢量图的能力，这意味着我们可以脱离 Flash 和 Silverlight，直接在浏览器中显示图形或动画。一些最新的浏览器，除了 IE，已经开始支持 Canvas。<br />
+	<br />
+	浏览器中的真正程序。将提供 API 实现浏览器内的编辑，拖放，以及各种图形用户界面的能力。内容修饰 Tag 将被剔除，而使用 CSS。<br />
+	<br />
+	从理论上讲，HTML 5 是培育新 Web 标准的土壤，让各种设想在他的组织者之间分享，但 HTML 5 目前仍处于试验阶段。 HTML5 吸取了 XHTML 2 的一些建议，包括一些用来改善文档结构的功能，比如，新的 HTML 标签 header, footer, dialog, aside, figure 等的使用，将使内容创作者更加语义地创建文档，之前的开发者在这些场合是一律使用 div 的。<br />
+	<br />
+	HTML5提供了一些新的元素和属性，例如（网站导航块）和。这种标签将有利于搜索引擎的索引整理，同时更好的帮助小屏幕装置和视障人士使用，除此之外，还为其他浏览要素提供了新的功能，如和标记。<br />
+	<br />
+	一些过时的HTML4标记将被取消。其中包括纯粹显示效果的标记，它们已经被CSS取代。<br />
+	<br />
+	HTML5 还包含了一些将内容和展示分离的努力，开发者们也许会惊讶，b 和 i 标签依然存在，但它们的意义已经和之前有所不同，这些标签的意义只是为了将一段文字标识出来，而不是为了为它们设置粗体或斜体式样。 u，font，center，strike 这些标签则被完全去掉了。<br />
+	<br />
+	新标准适用了一些全新的表单输入对象，包括日期，URL，Email 地址，其它的对象则增加了对非拉丁字符的支持。HTML5 还引入了微数据，一种使用机器可以识别的标签标注内容的方法，使语义 Web 的处理更为简单。<br />
+	<br />
+	总的来说，这些与结构有关的改进使内容创建者可以创建更干净，更容易管理的网页，这样的网页对搜索引擎，对读屏软件等更为友好。<br />
+	<br />
+	除了原先的DOM接口，HTML5增加了更多API,如：<br />
+	<br />
+	1. 用于即时2D绘图的Canvas标签<br />
+	<br />
+	2. 定时媒体回放<br />
+	<br />
+	3. 离线数据库存储<br />
+	<br />
+	4. 文档编辑<br />
+	<br />
+	5. 拖拽控制<br />
+	<br />
+	6. 浏览历史管理<br />
+	<br />
+	新的解析顺序新的元素：section, video, progress, nav, meter, time, aside, canvasinput。<br />
+	<br />
+	元素的新属性：日期和时间，email, url。<br />
+	<br />
+	新的通用属性：ping, charset, async。<br />
+	<br />
+	全域属性：id, tabindex, repeat。<br />
+	<br />
+	移除元素：center, font, strike。<br />
+	<br />
+	<strong>HTML 5有两大特点:</strong><br />
+	<br />
+	首先，强化了Web网页的表现性能。除了可描绘二维图形外，还准备了用于播放视频和音频的标签。<br />
+	<br />
+	其次，追加了本地数据库等Web应用的功能。<br />
+	<br />
+	HTML5(text/html)浏览器将在错误语法的处理上更加灵活。HTML5在设计时保证旧的浏览器能够安全的忽略掉新的HTML5代码。与HTML4.01相比，HTML5给出了解析的详细规则，力图让不同的浏览器即使在发生语法错误时也能返回相同的结果。<br />
+	<br />
+	HTML5 是近十年来 Web 标准最巨大的飞跃。和以前的版本不同，HTML 5 并非仅仅用来表示 Web 内容，它的使命是将 Web 带入一个成熟的应用平台，在这个平台上，视频，音频，图象，动画，以及同电脑的交互都被标准化。尽管 HTML 5 的实现还有很长的路要走，但 HTML 5 正在改变 Web。<br />
+	<br />
+	HTML 最近的一次升级是1999年12月发布的 HTML 4.01。自那以后，发生了很多事。最初的浏览器战争已经结束，Netscape 灰飞烟灭，IE5 作为赢家后来又发展到 IE6, IE7到IE8。Mozilla Firefox 从 Netscape 的死灰中诞生，并跃居第二位。苹果和 Google 各自推出自己的浏览器，而小家碧玉的 Opera 仍然嘤嘤嗡嗡地活着，并以推动 Web 标准为己命。我们甚至在手机和游戏机上有了真正的 Web 体验，感谢 Opera，iPhone 以及 Google 已经推出的 Android。<br />
+	<br />
+	然而这一切，仅仅让 Web 标准运动变得更加混乱，HTML 5 和其它标准被束之高阁，结果，HTML 5 一直以来都是以草案的面目示人。<br />
+	<br />
+	于是，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology Working Group （Web 超文本应用技术工作组 - WHATWG） 的组织，他们将重新拣起 HTML 5。这个组织独立于 W3C，成员来自 Mozilla， KHTML/Webkit 项目组，Google，Apple，Opera 以及微软。尽管 HTML 5 草案不会在短期内获得认可，但 HTML 5 总算得以延续。<br />
+	<br />
+	Mozilla 的技术副总裁 Mike Shaver 说，HTML 5 是一个被寄予厚望的概念，它既是WHATWG 组织的实验田，又是 W3C 的标准之路。<br />
+	<br />
+	Shaver 认为，Mozilla 的兴趣和 WHATWG 实验相吻合，Mozilla 在 HTML 5 工作组中非常活跃，我们对一些早期的细则进行实验并将成熟的结果提交 W3C。<br />
+	<br />
+	在过去的几年，Mozilla 随着各种出现的新标准，推出多个富有前瞻性的项目，包括 Prism，一个用于离线运行 Web 程序的系统，以及 Weave，一个数据存储框架。<br />
+	<br />
+	Shaver 说，HTML 5 运动肇始于对 W3C 的不耐烦，Web 标准中的很多进展都因 W3C 将重点从 HTML 转移到 XML 而停滞不前。<br />
+	<br />
+	很多基于 XML 架构的新技术被设计出来替代 HTML，Shaver 说，这不是一条正确的道路，人们不应象黑瞎子掰玉米把样一边掰一边丢。<br />
+	<br />
+	HTML 5 的新实验在 Firefox 以及 基于 Webkit 的 Safari 和 Chrome 浏览器中逐渐得到强化，但仍有不少问题。<br />
+	<br />
+	Chrome 的开发者 Darin Fisher 说，Chrome 仍在襁褓中时，就不得不面临几个问题，尽管使用的是最新的 Webkit，HTML 5 的本地数据库功能在 Chrome 的初期版本中并没有实现。因为 Chrome 的沙箱机制和 Webkit 的数据库功能有冲突。<br />
+	<br />
+	而由于 Chrome 属于秘密开发，Chrome 的开发人员也不便参与 Webkit 的开发。<br />
+	<br />
+	我们要想保守Chrome 的秘密，就无法参与 Webkit 社区。Fisher 说，我们很希望可以在某些方面给 Webkit 以帮助，我们拥有众多经验丰富的开发者，我们很想知道人们目前遇到的挑战并乐意提供帮助。<br />
+	<br />
+	随着 Chrome 的发布，Fisher 说他的团队成员有时会和 Webkit 的人一起吃饭，有些人私下里还成了好朋友。Fisher 称，他们迫切地想同其他 Webkit 开发组一起工作解决离线数据库的问题。<br />
+	<br />
+	Chrome里面还包含Google的开源 Gears 技术，用来实现与HTML5类似的离线功能。<br />
+	<br />
+	Gears可以看作已有 API 的替代品，Fisher 说，HTML 5 对新浏览器来说是非常好的东西，但绝大多数用户还使用旧浏览器。Gears可以让那些旧浏览器也获得这样的API，我们正在为 HTML 5 版 API 提供兼容。<br />
+	<br />
+	Gears 兼容性非常好，它正成为将 HTML 5 带向人们桌面的另外一条途径。<br />
+	<br />
+	目前，绝大多数工作由Apple，Mozilla, Opera, Google 以及Trolltech 展开。微软在干什么？IE因其对Web标准的迟钝而闻名，更不要说HTML5。但IE8可能会做出改变。<br />
+	<br />
+	微软 IE 平台与 WHAT 工作组主席 Chris Wilson 在邮件中称，我们希望我们现在开始的工作可以在HTML工作组创建一套测试系统。Wilson 说，IE开发组仍然对 HTML 5 的一些提议感到担忧。我觉得工作组的所有成员都会承认我们还有很多事要做。<br />
+	<br />
+	目前处于Beta版的IE9，已经包含HTML5的诸多新功能。它拥有一个跨文档消息系统，本地存储，以及一些离线事件来检测网络的中断。但还有些功能还未提上议程，如Canvas。<br />
+	<br />
+	HTML5 非常庞大，仍处在开发阶段，我认为浏览器厂商应当尽快达成一致，而每个浏览器的具体实现时间可以自己选择。Web开发者和浏览器厂商会同意 Wilson的下面这句话，这确切无疑是一个激动人心的时刻，我们希望看到Web成为新的应用平台。</span></p>
+</p>
+<ul>
+<h2>相关信息</h2>
+ <li><a href="/a/zhishiku/2015/0501/34.html" title="常见的网站攻击方式和处理措施">常见的网站攻击方式和处理措施</a></li>
+<li><a href="/a/zixun/2015/0501/33.html" title="为什么不同公司网站建设的价格差">为什么不同公司网站建设的价格差</a></li>
+<li><a href="/a/zixun/2015/0501/32.html" title="“一见钟情”企业网站建设的最高">“一见钟情”企业网站建设的最高</a></li>
+<li><a href="/a/zixun/2015/0501/31.html" title="您对网上商城建设有多少了解">您对网上商城建设有多少了解</a></li>
+<li><a href="/a/zixun/2015/0501/30.html" title="我国家电网购市场规模超两千亿元">我国家电网购市场规模超两千亿元</a></li>
+
+ </ul>
+</div>
+</section>
+<div class="list_bottom">
+<ul>
+ <span class="text_show_l"><b>上一条:</b><a href='/a/zixun/2015/0501/28.html'>在我们网站建设需要准备哪些资料?</a> </span>
+ <span class="text_show_r"><b>下一条:</b><a href='/a/zixun/2015/0501/30.html'>我国家电网购市场规模超两千亿元 移动商城成为</a> </span>
+ <span class="text_show_n"><a href="/a/news/" title="返回列表"></a></span>
+</ul>
+</div>
+<!--footer-->
+<footer class="foot2">
+<dl><a href="#" id="back-to-top"><img src="/skin/default/images/top.jpg" width="64" height="45"></a>
+<a href="/">首页</a>
+
+<a href="/a/service/">服务</a>
+
+<a href="/a/case/">案例</a>
+
+<a href="/a/news/">新闻</a>
+
+<a href="/a/about/">关于</a>
+
+<a href="/a/contact/">联系</a>
+
+</dl>
+<div class="foot-lxwm2">
+<ul>
+<p>在线QQ交谈：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=6009709&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:6009709:41" alt="点此咨询网站建设" title="点此咨询网站建设"/></a>
+<p>全国免费热线：4000-999-338 </p>
+<p>网站建设专线：028-83177768</p>  
+<p>售后服务电话：028-83210815</p>
+<span>地址广州市天河区迎龙路161号</span> 
+</ul>
+<em>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="45"><input name="title" type="text" class="biaodan1" value="姓名" id="formname" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td height="45" align="right"><input name="mycall" type="text" id="formmycall" class="biaodan1" value="电话" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+  <tr>
+    <td><input name="qq" type="text" class="biaodan1" value="QQ" id="formqq" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td align="right"><input name="company" type="text" class="biaodan1" id="formcompany" value="公司或个人建站：" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-top:10px;"  valign="top"><textarea name="saytext" id="formsaytext" cols="" rows="" class="biaodan2" placeholder="详细：" ></textarea></td>
+    <td style="padding-top:10px;" align="right" valign="top"><input type="image" id="submit-click" src="/skin/default/images/index_33.jpg"></td>
+  </tr>
+</table>
+<script type="text/javascript" src="/skin/default/js/vlajax.js"></script>
+</em>
+</div>
+<div class="bootom"><span><em>成都网站建设十强企业！</em>版权所有：成都市九兴数码科技有限公司&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" rel=“nofollow”>蜀ICP备12002330号-7</a></span></div>
+</footer>
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+</body>
+</html>

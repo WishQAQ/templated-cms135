@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            /skin/default/images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<!--banner-->
+<section class="banner2" style="background-image:url(/skin/default/images/service_b.jpg)">
+<dl>
+<h2>{dede:field name='typename'/}</h2><i>我们的力量！ Our strength!</i>
+<div class="side_nav">
+
+</div>
+</dl>
+</section>
+<!--main-->
+<section id="main">
+<ul class="Service_list">
+
+<li onMouseOver="$('#lis7').css('background-image','url(/skin/default/images/4e8facb1a1730464ee9f2f143ab3b0dd.png)')" onMouseOut="$('#lis7').css('background-image','url(/skin/default/images/1278de8e0b02f2362416cb05181608ed.png)')">
+<a href="">
+<s id="lis7" style="background:url(/skin/default/images/1278de8e0b02f2362416cb05181608ed.png) no-repeat center center;" ></s>
+<span>品牌网站建设</span>
+<p>深入剖析企业需求，致力于树立良好的企业品牌形象，完善企业对内外的传播需求。积极协助企业找到发展战略核心，从战略的角度树立企业的品牌形象。</p>
+</a>
+</li><li onMouseOver="$('#lis25').css('background-image','url(/skin/default/images/454843d4bff8fc22c4705358929bce1b.png)')" onMouseOut="$('#lis25').css('background-image','url(/skin/default/images/b4dcff31293d2114ddf873a088e0de44.png)')">
+<a href="">
+<s id="lis25" style="background:url(/skin/default/images/b4dcff31293d2114ddf873a088e0de44.png) no-repeat center center;" ></s>
+<span>手机网站建设</span>
+<p>成都手机网站定制化开发，使用最新的html5/css3网站建设技术，适应各种屏幕大小，更具友好的手机浏览体验，帮助企业建立切实有效的手机网站营销平台。</p>
+</a>
+</li><li onMouseOver="$('#lis24').css('background-image','url(/skin/default/images/45ca556172b4394bb1713b81434afa6d.png)')" onMouseOut="$('#lis24').css('background-image','url(/skin/default/images/9638a4b328f2b386c8ea8857f0dcc855.png)')">
+<a href="">
+<s id="lis24" style="background:url(/skin/default/images/9638a4b328f2b386c8ea8857f0dcc855.png) no-repeat center center;" ></s>
+<span>微信网站开发</span>
+<p>基于微信公众平台开放平台接口研发，为企业进行微信营销过程中提供全方位帮助，通过微信展现企业或商家的形象，并提供有效的线上线下营销解决方案；</p>
+</a>
+</li><li onMouseOver="$('#lis23').css('background-image','url(/skin/default/images/1bf5a5e7d058e713d3a0456169028d39.png)')" onMouseOut="$('#lis23').css('background-image','url(/skin/default/images/bcea370935b3fa4d3abcc472ec84b859.png)')">
+<a href="">
+<s id="lis23" style="background:url(/skin/default/images/bcea370935b3fa4d3abcc472ec84b859.png) no-repeat center center;" ></s>
+<span>电商网站建设</span>
+<p>专业定制策划B2C B2B B2B2C  O2O电商网站解决方案，以专业的功能、领先的技术以及快速的价值体现，助力企业多渠道互联网络营销！</p>
+</a>
+</li><li onMouseOver="$('#lis26').css('background-image','url(/skin/default/images/c6fe52f07422180618d0540abc30d825.png)')" onMouseOut="$('#lis26').css('background-image','url(/skin/default/images/c6fe52f07422180618d0540abc30d825.png)')">
+<a href="">
+<s id="lis26" style="background:url(/skin/default/images/c6fe52f07422180618d0540abc30d825.png) no-repeat center center;" ></s>
+<span>平台系统开发</span>
+<p>各类垂直行业平台网站，行业门户网站开发，采用九九数码历时2年重金研发的门户CMS网站后台，强化业内信息的分类，充分体现本行业特色。</p>
+</a>
+</li><li onMouseOver="$('#lis27').css('background-image','url(/skin/default/images/e82e97edda5d3d5400993234948539a3.png)')" onMouseOut="$('#lis27').css('background-image','url(/skin/default/images/34ecdd96bfdbb863cf99903237367239.png)')">
+<a href="">
+<s id="lis27" style="background:url(/skin/default/images/34ecdd96bfdbb863cf99903237367239.png) no-repeat center center;" ></s>
+<span>其他服务</span>
+<p>400电话办理，成千上万的靓号等您选！<br />
+53客服办理，专业的咨询软件，提高网站成交率！<br />
+央视企业宣传片制作，独特媒体渠道网络传播！<br />
+赶集广告投放，想让您的信息让更多人看到吗？赶快联系我们吧！</p>
+</a>
+</li>
+</ul>
+</section>
+<!--footer-->
+{dede:include filename="footer.htm"/}
+<!--footer end-->
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>404</title>
+</head>
+
+<body>
+<div style="width:500px;height:500px;margin:0 auto;text-align: center;">
+  <p style="font-size: 30px;color: #7AB735;text-align: right;"><span style="color: #FFA500;text-align:center;" id="span">5s</span>后返回首页</p>
+  <div style="float:left;width:250px;height:250px;"> <img src="../../images/404.jpg" width="234" height="268" /> </div>
+  <div style="float: left;width: 250px;height: 250px;color: #7AB735;font-size: 27px;line-height: 39px;padding-top: 100px;font-weight:bold;"> 你查看的页面笨笨的<br />
+    程序猿做不到啊！ </div>
+  <a href="../../../../www.99shuma.html" title="返回首页" style="">返回首页</a> <a href="javascript:history.go(-1);" style="">返回前一页</a> </div>
+<style>
+a{width: 90px;height: 35px;display: block;float: left;background:#7AB735;color:#FFF;margin: 0 80px;line-height: 35px;border-radius: 5px;text-decoration: none;font-weight: bold;}
+</style>
+<script type="text/javascript">
+var time=5;
+aa();
+function aa(){
+	var text=time+'s';
+	document.getElementById('span').innerHTML=text;
+	if(time==0){
+		window.location.href='/';
+	}
+	time--;
+	setTimeout(function(){aa()},1000);
+}
+</script>
+</body>
+</html>

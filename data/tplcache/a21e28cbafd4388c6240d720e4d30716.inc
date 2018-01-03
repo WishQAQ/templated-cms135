@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]"><img src="[field:picname/]" width="188" height="290" alt="[field:title/]"><span><em>[field:title/]</em><i>职位：[field:zhiwei/]</i></span></a></li>

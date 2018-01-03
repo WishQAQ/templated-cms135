@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<!--banner-->
+<section class="banner2" style="background-image:url(/skin/default/images/news_b.jpg)">
+<dl>
+<h2>{dede:field name='typename'/}</h2><i>都发生过什么?  What had happened? </i>
+<div class="side_nav">
+<ul>
+{dede:channel type="son" currentstyle="<li><a href='~typelink~' id='active'>~typename~</a></li>" }
+<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+{/dede:channel}
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+
+<section id="main">
+<div class="news_show">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200"><img src="{dede:field.picname/}" width="200" ></td>
+    <td width="20">&nbsp;</td>
+    <td valign="top" class="news_text">
+<h3>{dede:field.title/}</h3>
+<span>日期：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+<span>浏览次数：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></span>
+<span>分类：{dede:field.typename/}</span>
+<span>来源：{dede:field.source/}</span>
+    </td>
+  </tr>
+<tr>
+<td height="30"></td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;">{dede:field.body/}</p>
+<ul>
+<h2>相关信息</h2>
+ {dede:arclist typeid=6 row=5 titlelen=40 orderby='pubdate' }
+ <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+ {/dede:arclist}
+ </ul>
+</div>
+</section>
+<div class="list_bottom">
+<ul>
+ <span class="text_show_l"><b>上一条:</b>{dede:prenext get='pre'/}</span>
+ <span class="text_show_r"><b>下一条:</b>{dede:prenext get='next'/}</span>
+ <span class="text_show_n"><a href="/a/news/" title="返回列表"></a></span>
+</ul>
+</div>
+<!--footer-->
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+</body>
+</html>

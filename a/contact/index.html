@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系-我的网站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            /skin/default/images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+<header class="header">
+<nav class="menu">
+<h1 id="logo"><a href="/" title="我的网站"><img src="/skin/default/images/lg.png" width="250" height="76" alt="我的网站"></a></h1>
+<ul>
+<li><a href="/">首页</a></li>
+
+<li><a href="/a/service/">服务</a></li>
+
+<li><a href="/a/case/">案例</a></li>
+
+<li><a href="/a/news/">新闻</a></li>
+
+<li><a href="/a/about/">关于</a></li>
+<li class='active'><a href='/a/contact/'>联系</a></li>
+</ul>
+</nav>
+</header>
+<!--banner-->
+<section class="banner2"style="background-image:url(/skin/default/images/contact_b.jpg)">
+<dl>
+<h2>联系</h2><i>我们是谁？ Who are we?</i>
+<div class="side_nav">
+<ul>
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+<section id="main">
+<h2 style="text-align: center;">
+	<br />
+	<br />
+	<br />
+	<span style="font-family: 微软雅黑,Microsoft YaHei;">某某农牧业开发有限责任公司</span></h2>
+<h3 style="text-align: center;">
+	0477-2276067</h3>
+<p style="text-align: center;">
+	XX市XX区XX号<br />
+	邮箱：xx@163.com　网址：www.xunmoban.com　传真：080-0000000</p>
+<p style="text-align: center;">
+	<img src="/uploads/allimg/150502/1-150502122U64S.jpg" title="lxwmimg_07.jpg" /></p>
+<p>
+	&nbsp;</p>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+<meta content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" name="keywords" />
+<meta content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" name="description" />
+<title></title>
+<!--引用百度地图API-->
+<style type="text/css">
+html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script><!--百度地图容器-->
+<div id="dituContent" style="width:1003px;height:400px;border:#ccc solid 1px;">
+	&nbsp;</div>
+<script type="text/javascript">//创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.36996,23.202193);//定义一个中心点坐标
+        map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"寻模板",content:"邮箱：XX@163.com　<br/>网址：www.xunmoban.com<br/>电话：080-0000000<br/>传真：080-0000000",point:"113.374784|23.199602",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图</script><!--!doctype-->
+<center style="height:30px;line-heihgt:30px;">
+	&nbsp;</center>
+
+</section>
+<!--footer-->
+<footer class="foot2">
+<dl><a href="#" id="back-to-top"><img src="/skin/default/images/top.jpg" width="64" height="45"></a>
+<a href="/">首页</a>
+
+<a href="/a/service/">服务</a>
+
+<a href="/a/case/">案例</a>
+
+<a href="/a/news/">新闻</a>
+
+<a href="/a/about/">关于</a>
+
+<a href="/a/contact/">联系</a>
+
+</dl>
+<div class="foot-lxwm2">
+<ul>
+<p>在线QQ交谈：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=6009709&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:6009709:41" alt="点此咨询网站建设" title="点此咨询网站建设"/></a>
+<p>全国免费热线：4000-999-338 </p>
+<p>网站建设专线：028-83177768</p>  
+<p>售后服务电话：028-83210815</p>
+<span>地址：XX市XX区XX号</span> 
+</ul>
+<em>
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="45"><input name="title" type="text" class="biaodan1" value="姓名" id="formname" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td height="45" align="right"><input name="mycall" type="text" id="formmycall" class="biaodan1" value="电话" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+  <tr>
+    <td><input name="qq" type="text" class="biaodan1" value="QQ" id="formqq" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td align="right"><input name="company" type="text" class="biaodan1" id="formcompany" value="公司或个人建站：" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-top:10px;"  valign="top"><textarea name="saytext" id="formsaytext" cols="" rows="" class="biaodan2" placeholder="详细：" ></textarea></td>
+	<input type="hidden" name="dede_fields" value="title,text;mycall,text;qq,text;company,text;saytext,multitext" />
+    <input type="hidden" name="dede_fieldshash" value="6350391b79e41406858623538743409e" />
+
+
+    <td style="padding-top:10px;" align="right" valign="top"><input type="image" id="submit-click" src="/skin/default/images/index_33.jpg"></td>
+  </tr>
+</table>
+</form>
+<script type="text/javascript" src="/skin/default/js/vlajax.js"></script>
+</em>
+</div>
+<div class="bootom"><span><em>寻模板网</em>Copyright &copy; 2002-2011 站窝窝 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" rel=“nofollow”>闽ICP备1234577886号</a></span></div>
+</footer>
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻  /  知识库-我的网站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            /skin/default/images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+<header class="header">
+<nav class="menu">
+<h1 id="logo"><a href="/" title="我的网站"><img src="/skin/default/images/lg.png" width="250" height="76" alt="我的网站"></a></h1>
+<ul>
+<li><a href="/">首页</a></li>
+
+<li><a href="/a/service/">服务</a></li>
+
+<li><a href="/a/case/">案例</a></li>
+<li class='active'><a href='/a/news/'>新闻</a></li>
+<li><a href="/a/about/">关于</a></li>
+
+<li><a href="/a/contact/">联系</a></li>
+
+</ul>
+</nav>
+</header>
+<!--banner-->
+<section class="banner2" style="background-image:url(/skin/default/images/news_b.jpg)">
+<dl>
+<h2>知识库</h2><i>都发生过什么?  What had happened? </i>
+<div class="side_nav">
+<ul>
+
+<li><a href="/a/news/">资讯</a></li>
+<li><a href='/a/zhishiku/' id='active'>知识库</a></li>
+<li><a href="/a/beian/">备案</a></li>
+
+<li><a href="/a/bangzhu/">帮助</a></li>
+
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+
+<section id="main">
+<ul id="news_list">
+
+
+<li>
+<dl id="news_l"><em>Date</em><b>05</b><i>2015</i></dl>
+<span>
+<h3><a href="/a/zhishiku/2015/0501/34.html">常见的网站攻击方式和处理措施</a></h3>
+<em>分类：知识库<br>浏览次数：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></em>
+<p>网站流量大了便会时常面对黑客的攻击，一旦受攻击，很多人都不知所措。为此，我们总结了常见的网站攻击方式和防护方法，以供参考。攻击描述：针对网站程序漏洞，植入木马(web…</p>
+</span>
+<s><a href="/a/zhishiku/2015/0501/34.html" title="常见的网站攻击方式和处理措施"><img src="/uploads/allimg/150501/1-1505012231490-L.jpg" width="175" height="110" alt="常见的网站攻击方式和处理措施"></a></s>
+</li>
+
+</ul>
+<div id="Pagination">
+<em><span class="pageinfo">共 <strong>1</strong>页<strong>1</strong>条记录</span></em>
+
+</div>
+</section>
+<!--footer-->
+<footer class="foot2">
+<dl><a href="#" id="back-to-top"><img src="/skin/default/images/top.jpg" width="64" height="45"></a>
+<a href="/">首页</a>
+
+<a href="/a/service/">服务</a>
+
+<a href="/a/case/">案例</a>
+
+<a href="/a/news/">新闻</a>
+
+<a href="/a/about/">关于</a>
+
+<a href="/a/contact/">联系</a>
+
+</dl>
+<div class="foot-lxwm2">
+<ul>
+<p>在线QQ交谈：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=6009709&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:6009709:41" alt="点此咨询网站建设" title="点此咨询网站建设"/></a>
+<p>全国免费热线：4000-999-338 </p>
+<p>网站建设专线：028-83177768</p>  
+<p>售后服务电话：028-83210815</p>
+<span>地址：XX市XX区XX号</span> 
+</ul>
+<em>
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="45"><input name="title" type="text" class="biaodan1" value="姓名" id="formname" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td height="45" align="right"><input name="mycall" type="text" id="formmycall" class="biaodan1" value="电话" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+  <tr>
+    <td><input name="qq" type="text" class="biaodan1" value="QQ" id="formqq" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+    <td align="right"><input name="company" type="text" class="biaodan1" id="formcompany" value="公司或个人建站：" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-top:10px;"  valign="top"><textarea name="saytext" id="formsaytext" cols="" rows="" class="biaodan2" placeholder="详细：" ></textarea></td>
+	<input type="hidden" name="dede_fields" value="title,text;mycall,text;qq,text;company,text;saytext,multitext" />
+    <input type="hidden" name="dede_fieldshash" value="6350391b79e41406858623538743409e" />
+
+
+    <td style="padding-top:10px;" align="right" valign="top"><input type="image" id="submit-click" src="/skin/default/images/index_33.jpg"></td>
+  </tr>
+</table>
+</form>
+<script type="text/javascript" src="/skin/default/js/vlajax.js"></script>
+</em>
+</div>
+<div class="bootom"><span><em>寻模板网</em>Copyright &copy; 2002-2011 站窝窝 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" rel=“nofollow”>闽ICP备1234577886号</a></span></div>
+</footer>
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+</body>
+</html>
+
+ 

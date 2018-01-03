@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<!--banner-->
+<section class="banner2"style="background-image:url(/skin/default/images/about_b.jpg)">
+<dl>
+<h2>{dede:field name='typename'/}</h2><i>我们是谁？ Who are we?</i>
+<div class="side_nav">
+<ul>
+{dede:channel type="son" currentstyle="<li><a href='~typelink~' id='active'>~typename~</a></li>" }
+<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+{/dede:channel}
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+<section id="main">
+<div class="box">
+<ul class="event_year">
+<li class="current"><label for="2015">2015</label></li>
+<li><label for="2014">2014</label></li>
+<li><label for="2013">2013</label></li>
+<li><label for="2012">2012</label></li>
+<li><label for="2011">2011</label></li>
+<li><label for="2010">2010</label></li>
+<li><label for="2009">2009</label></li>
+<li><label for="2008">2008</label></li>
+<li><label for="2007">2007</label></li>
+<li><label for="2006">2006</label></li>
+<li><label for="2005">2005</label></li>
+</ul>
+<ul class="event_list">
+<div>
+<h3 id="2015">2015</h3>
+</div>
+<div>
+<h3 id="2014">2014</h3>
+    <li> <span>10月01</span>
+<p><span>集团名称正式启用某某公司。</span></p>
+</li>
+        <li> <span>12月02</span>
+<p><span>网络运营学院项目正式启动。</span></p>
+</li>
+    </div>
+<div>
+<h3 id="2013">2013</h3>
+    <li> <span>06月14</span>
+<p><span>智能家居项目正式启动。</span></p>
+</li>
+    </div>
+<div>
+<h3 id="2012">2012</h3>
+    <li> <span>02月19</span>
+<p><span>某某公司四川工商网项目确定，打造四川工商、融资、财税、法律一条龙服务平台。</span></p>
+</li>
+    </div>
+<div>
+<h3 id="2011">2011</h3>
+    <li> <span>01月09</span>
+<p><span>公司领导和亿邦动力CEO、京东商城总经理刘强东共同出席成都电商大会。</span></p>
+</li>
+        <li> <span>07月19</span>
+<p><span>开发的物流行业信息应用软件《安运宝》上线。</span></p>
+</li>
+        <li> <span>11月11</span>
+<p><span>号召同行，拒绝建立垃圾网站倡议发布。（此倡议改变了成都网站建设发展路径，目前有实力的公司均已经标明：拒绝模版）</span></p>
+</li>
+        <li> <span>12月27</span>
+<p><span>与《中国健康产业联盟》达成战略合作，打造健康产业电子商务平台。</span></p>
+</li>
+    </div>
+<div>
+<h3 id="2010">2010</h3>
+    <li> <span>01月12</span>
+<p><span>某某公司被邀加入成都市电子商务协会。</span></p>
+</li>
+        <li> <span>07月01</span>
+<p><span>荷花池电子商务孵化项目启动，由荷花金池管委会主导，某某公司提供全面技术支持。</span></p>
+</li>
+    </div>
+<div>
+<h3 id="2009">2009</h3>
+    <li> <span>07月10</span>
+<p><span>某某公司被评为中小企业电子商务特约顾问</span></p>
+</li>
+    
+</div>
+<div>
+<h3 id="2008">2008</h3>
+
+</div>
+<div>
+<h3 id="2007">2007</h3>
+    <li> <span>05月20</span>
+<p><span>与“资阳经济委员会、中国四川省委政策研究室"达成合作。</span></p>
+</li>
+    
+</div>
+<div>
+<h3 id="2006">2006</h3>
+    <li> <span>03月19</span>
+<p><span>“网络之家”更名为“某某公司”、注册公司。</span></p>
+</li>
+    
+</div>
+
+<div>
+<h3 id="2005">2005</h3>
+    <li> <span>06月01</span>
+<p><span>某某公司的前身“网络之家工作室”成立。</span></p>
+</li>
+    
+</div>
+
+
+</ul>
+<div class="clearfix"></div>
+</div>
+</section>
+<!--footer-->
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+<script>
+$(function(){
+$('label').click(function(){
+$('.event_year>li').removeClass('current');
+$(this).parent('li').addClass('current');
+var year = $(this).attr('for');
+$('#'+year).parent().prevAll('div').slideUp(800);
+$('#'+year).parent().slideDown(800).nextAll('div').slideDown(800);
+});
+});
+</script>
+</body>
+</html>

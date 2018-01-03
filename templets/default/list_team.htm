@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/skin/default/css/style.css">
+<script type="text/javascript" src="/skin/default/js/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/skin/default/js/html5.js"></script><![endif]-->
+<!--[if lt IE 10]><script type="text/javascript" src="/skin/default/images/PIE.js"></script><![endif]-->
+<script type="text/javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+         var s='/skin/default/';
+          s+images/PIE.attach(this);
+        });
+    }
+});
+//Caes
+$(function(){
+	var moveHeight = 226,
+		moveTime = 200,
+		curMove = null;
+	$('.caselist li').hover(function (e){
+		var curLi = $(this);
+		curMove = setTimeout(function (){
+			curLi.children('a.tagImg1').animate({ top: '-' + moveHeight + 'px' }, moveTime);
+			curLi.children('div.tagDiv1').animate({ top: '0px' }, moveTime);
+		}, 200);
+	},function(e){
+		clearTimeout(curMove);
+		$(this).children('a.tagImg1').animate({ top: '0px' }, moveTime);
+		$(this).children('div.tagDiv1').animate({ top: moveHeight + 'px' }, moveTime);
+	});
+});
+</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<!--banner-->
+<section class="banner2"style="background-image:url(/skin/default/images/about_b.jpg)">
+<dl>
+<h2>{dede:field name='typename'/}</h2><i>我们是谁？ Who are we?</i>
+<div class="side_nav">
+<ul>
+{dede:channel type="son" currentstyle="<li><a href='~typelink~' id='active'>~typename~</a></li>" }
+<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+{/dede:channel}
+</ul>
+</div>
+</dl>
+</section>
+<!--main-->
+<section class="Team_list">
+<ol>
+<ul>
+{dede:list pagesize="15" addfields='zhiwei' channelid='19'}
+<li><a href="[field:arcurl/]"><img src="[field:picname/]" width="188" height="290" alt="[field:title/]"><span><em>[field:title/]</em><i>职位：[field:zhiwei/]</i></span></a></li>
+{/dede:list}
+
+
+</ul>
+</ol>
+<div id="Pagination">
+{dede:pagelist listitem="index,pre,next,pageno,end" listsize="5"/}
+</div>
+</section>
+<!--footer-->
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="/skin/default/js/org.luoye.search.js"></script>
+<script type="text/javascript" src="/skin/default/js/slides.jquery.js"></script>
+<script type="text/javascript" src="/skin/default/js/main.js"></script>
+<script type="text/javascript" src="/skin/default/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="/skin/default/js/script.js"></script>
+<!--添加代码-->
+</body>
+</html>
